@@ -1,0 +1,31 @@
+
+/* Write a code which gets some numbers until receiving -1 and displays the maximum of them.*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Session3_Ex13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float max = 0;
+            float num;
+            do
+            {
+                Console.WriteLine("Please enter a new number or -1 to stop:");
+                num = float.Parse(Console.ReadLine());
+                if (num > max) { max = num; }
+
+            } while (num != -1);
+            Console.WriteLine("The maximum number is:\t" + max);
+
+            Console.ReadKey();
+
+        }
+    }
+}
